@@ -26,7 +26,7 @@ function newRatesBoard() {
     });
 }
 newRatesBoard();
-setInterval(newRatesBoard, 60000);
+setInterval(() => newRatesBoard(), 60000);
 
 
 
