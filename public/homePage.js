@@ -39,7 +39,7 @@ moneyManager.addMoneyCallback = (data) => {
             ProfileWidget.showProfile(result.data);
             message = `Операция выполнена`;
         } else {
-            message = `Операция не выполнена`;
+            message = result.error;
         }
         return moneyManager.setMessage(result.success, message);
 
@@ -52,7 +52,7 @@ moneyManager.conversionMoneyCallback = (data) => {
             ProfileWidget.showProfile(result.data);
             message = `Операция выполнена`;
         } else {
-            message = `Операция не выполнена`;
+            message = result.error;
         }
         return moneyManager.setMessage(result.success, message);
     })
@@ -65,7 +65,7 @@ moneyManager.sendMoneyCallback = (data) => {
             ProfileWidget.showProfile(result.data);
             message = `Операция выполнена`;
         } else {
-            message = `Операция не выполнена`;
+            message = result.error;
         }
          moneyManager.setMessage(result.success, message);
     })
@@ -89,7 +89,7 @@ favoritesWidget.addUserCallback = (data) => {
         moneyManager.updateUsersList(result.data);
         message = `Операция выполнена`;
      } else {
-         message = `Операция не выполнена`;
+         message = result.error;
      } favoritesWidget.setMessage(result.success, message);
     })
 }
@@ -102,7 +102,7 @@ favoritesWidget.removeUserCallback = (data) => {
            moneyManager.updateUsersList(result.data);
            message = `Операция выполнена`;
         } else {
-            message = `Операция не выполнена`;
+            message = result.error;
         } favoritesWidget.setMessage(result.success, message);
     })
 
